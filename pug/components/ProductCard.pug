@@ -1,0 +1,13 @@
+mixin ProductCard(img, title, price, isSpicy=false)
+    .product_card
+        .product_card_img
+            if isSpicy
+                //- TODO: add an spicy icon
+            img(src=img, alt="Product")
+        .product_card_text
+            div
+                h3= title
+                p= `${price} сум`
+            div(align="right")
+                button(type="button" align="right")
+                    img(src="./assets/plus.svg", alt="+")

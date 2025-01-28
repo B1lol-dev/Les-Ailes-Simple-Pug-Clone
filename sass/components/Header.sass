@@ -1,0 +1,93 @@
+@use '../root'
+    
+header
+    border-bottom: 1px solid root.$border_gray
+    // width: 100%
+    // position: fixed
+    // background: root.$main_bg
+    .navbar
+        padding-block: 1.1rem
+        .container
+            display: flex
+            align-items: center
+
+            .nav_logo
+                max-width: 188px
+                max-height: 29px
+                height: 100%
+                width: 100%
+                img
+                    width: 100%
+                    height: 100%
+
+            button.nav_btn
+                background-color: root.$bg_pr
+                padding: 6px 41px
+                margin-inline: 6px auto
+                border-radius: 12px
+                height: 36px
+                transition: .2s ease-in-out
+                
+
+                &:hover
+                    opacity: 0.9
+                
+                &:active
+                    transform: scale(.95)
+
+                p
+                    font-size: .9rem
+                    color: root.$text_white
+                    font-weight: 400
+                    line-height: 24px
+                    display: flex
+                    &::before                        
+                        content: url('../assets/location_icon.svg')
+                        margin-right: 12px
+                        height: 14px
+                        width: 14px
+                        transform: translateY(5%)
+                        
+            #nav_collection
+                display: flex
+                gap: 1rem
+                transition: .2s ease-in-out
+
+                &.visible
+                    transform: translateX(0%)
+                
+                li
+                    a
+                        font-weight: 400
+                        font-size: 1rem
+            
+            #nav_menu
+                background: none
+                user-select: none
+                object-fit: cover
+                display: none
+    
+@media (max-width: 850px)
+    header
+        .navbar
+            .container
+                .nav_logo
+                    display: none
+
+@media (max-width: 680px)
+    header
+        .navbar
+            .container
+                #nav_collection
+                    flex-direction: column
+                    position: fixed
+                    top: 0
+                    left: 0
+                    padding: 70px
+                    background: root.$main_bg
+                    transform: translateX(-100%)
+                    height: 100vh
+                    z-index: 9999
+
+                #nav_menu
+                    display: block

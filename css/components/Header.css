@@ -1,0 +1,90 @@
+header {
+  border-bottom: 1px solid #e5e5e5;
+}
+header .navbar {
+  padding-block: 1.1rem;
+}
+header .navbar .container {
+  display: flex;
+  align-items: center;
+}
+header .navbar .container .nav_logo {
+  max-width: 188px;
+  max-height: 29px;
+  height: 100%;
+  width: 100%;
+}
+header .navbar .container .nav_logo img {
+  width: 100%;
+  height: 100%;
+}
+header .navbar .container button.nav_btn {
+  background-color: #fc004a;
+  padding: 6px 41px;
+  margin-inline: 6px auto;
+  border-radius: 12px;
+  height: 36px;
+  transition: 0.2s ease-in-out;
+}
+header .navbar .container button.nav_btn:hover {
+  opacity: 0.9;
+}
+header .navbar .container button.nav_btn:active {
+  transform: scale(0.95);
+}
+header .navbar .container button.nav_btn p {
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+}
+header .navbar .container button.nav_btn p::before {
+  content: url("../assets/location_icon.svg");
+  margin-right: 12px;
+  height: 14px;
+  width: 14px;
+  transform: translateY(5%);
+}
+header .navbar .container #nav_collection {
+  display: flex;
+  gap: 1rem;
+  transition: 0.2s ease-in-out;
+}
+header .navbar .container #nav_collection.visible {
+  transform: translateX(0%);
+}
+header .navbar .container #nav_collection li a {
+  font-weight: 400;
+  font-size: 1rem;
+}
+header .navbar .container #nav_menu {
+  background: none;
+  user-select: none;
+  object-fit: cover;
+  display: none;
+}
+
+@media (max-width: 850px) {
+  header .navbar .container .nav_logo {
+    display: none;
+  }
+}
+@media (max-width: 680px) {
+  header .navbar .container #nav_collection {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 70px;
+    background: #ffffff;
+    transform: translateX(-100%);
+    height: 100vh;
+    z-index: 9999;
+  }
+  header .navbar .container #nav_menu {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */

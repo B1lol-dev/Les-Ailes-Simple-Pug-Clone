@@ -1,0 +1,34 @@
+include ../components/Header.pug
+include ../components/Footer.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Product
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
+    body
+        +Header
+        main
+            section#productPage
+                .container
+                    //- a(href="/").back_arrow
+                        button(type="button")
+                            img(src="../assets/back_arrow.svg", alt="Back")
+                    .productPage_content
+                        .productPage_img
+                            img(src="/assets/sets/1.png" alt="Product")#productPage_img
+                        #productPage_text
+                            h1
+                            p
+                            div
+                                h2#productPage_price 0 сум
+                                div#productPage_control
+                                    button(type="button") -
+                                    h3 1
+                                    button(type="button") +
+                            button(type="button").productPage_card_btn В корзину
+        +Footer
+        script(src="/js/productPage.js") 

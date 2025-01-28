@@ -1,0 +1,10 @@
+include ./ProductCard.pug
+
+mixin Sets(cards)
+    section#sets 
+        .container
+            h1 Сеты
+            .sets_wrapper
+                each card, index in cards
+                    a(href=`./pages/product.html?type=set&product=${index+1}`)
+                        +ProductCard(card.img, card.title, card.price, false)

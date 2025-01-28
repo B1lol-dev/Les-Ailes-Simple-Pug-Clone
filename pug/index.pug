@@ -1,0 +1,86 @@
+//- components
+include ./components/Header.pug
+include ./components/Hero.pug
+include ./components/Sets.pug
+include ./components/Footer.pug
+
+//- - var setsCards = [
+//-     {
+//-         img: './assets/sets/1.png',
+//-         title: 'Qiyqiriq сет',
+//-         price: '45 000'
+//-     },
+//-     {
+//-         img: './assets/sets/2.png',
+//-         title: 'Снек сет',
+//-         price: '79 000'
+//-     },
+//-     {
+//-         img: './assets/sets/3.png',
+//-         title: 'Классик сет',
+//-         price: '45 000'
+//-     },
+//-     {
+//-         img: './assets/sets/4.png',
+//-         title: 'Лонгер рингс сет',
+//-         price: '45 000'
+//-     },
+//-     {
+//-         img: './assets/sets/5.png',
+//-         title: 'Биг сет',
+//-         price: '62 000'
+//-     },
+//-     {
+//-         img: './assets/sets/6.png',
+//-         title: 'Лестер сет',
+//-         price: '53 000'
+//-     },
+//-     {
+//-         img: './assets/sets/7.png',
+//-         title: 'Скул сет',
+//-         price: '36 000'
+//-     },
+//-     {
+//-         img: './assets/sets/8.png',
+//-         title: 'Комбо сет Большой',
+//-         price: '20 000'
+//-     },
+//-     {
+//-         img: './assets/sets/9.png',
+//-         title: 'Do’stlar 1х',
+//-         price: '43 000'
+//-     },
+//-     {
+//-         img: './assets/sets/10.png',
+//-         title: 'Do’stlar 2х',
+//-         price: '79 000'
+//-     },
+//-     {
+//-         img: './assets/sets/11.png',
+//-         title: 'Do’stlar 4х',
+//-         price: '149 000'
+//-     },
+//-     {
+//-         img: './assets/sets/12.png',
+//-         title: 'Острый Do’stlar 1х',
+//-         price: '43 000'
+//-     }
+//- ]
+
+- var setsCards = [{img: './assets/sets/1.png', title: 'Qiyqiriq сет', price: '45 000'}, {img: './assets/sets/2.png', title: 'Снек сет', price: '79 000'}, {img: './assets/sets/3.png', title: 'Классик сет', price: '45 000'}, {img: './assets/sets/4.png', title: 'Лонгер рингс сет', price: '45 000'}, {img: './assets/sets/5.png', title: 'Биг сет', price: '62 000'}, {img: './assets/sets/6.png', title: 'Лестер сет', price: '53 000'}, {img: './assets/sets/7.png', title: 'Скул сет', price: '36 000'}, {img: './assets/sets/8.png', title: 'Комбо сет Большой', price: '20 000'}, {img: './assets/sets/9.png', title: 'Do’stlar 1х', price: '43 000'}, {img: './assets/sets/10.png', title: 'Do’stlar 2х', price: '79 000'}, {img: './assets/sets/11.png', title: 'Do’stlar 4х', price: '149 000'}, {img: './assets/sets/12.png', title: 'Острый Do’stlar 1х', price: '43 000'}]
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Les Ailes
+        link(rel="stylesheet", href="./css/main.css")
+        link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
+    body 
+        +Header
+        main
+            +Hero
+            +Sets(setsCards)
+        +Footer
+    script(src="/js/main.js")
